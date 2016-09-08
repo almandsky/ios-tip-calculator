@@ -34,14 +34,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FR4-R5-4DT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FR4-R5-4DT">
                                 <rect key="frame" x="199" y="137" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$103.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GCw-8I-HTT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GCw-8I-HTT">
                                 <rect key="frame" x="199" y="216" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -67,13 +67,31 @@
                                     <segment title="18%"/>
                                     <segment title="20%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lew-Xs-Q75"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="U1F-Uq-oYg" appends="YES" id="qYN-Bh-bX0"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="E1W-b1-YGe"/>
+                    <connections>
+                        <outlet property="billTextValue" destination="s9p-1G-5Gh" id="6rQ-XO-yLA"/>
+                        <outlet property="tipControl" destination="ql2-ld-CLi" id="TW8-T7-9AV"/>
+                        <outlet property="tipLable" destination="FR4-R5-4DT" id="SWE-CD-Feb"/>
+                        <outlet property="totalLable" destination="GCw-8I-HTT" id="eR6-d8-jC3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="U1F-Uq-oYg">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="0wc-ee-a6Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="694" y="346"/>
         </scene>
